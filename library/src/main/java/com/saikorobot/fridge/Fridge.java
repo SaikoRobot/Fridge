@@ -126,17 +126,17 @@ public final class Fridge {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
                         outState.putBinder(key, (IBinder) value);
                     }
-                } else if (type.equals(Size.class)) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        outState.putSize(key, (Size) value);
-                    }
-                } else if (type.equals(SizeF.class)) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        outState.putSizeF(key, (SizeF) value);
-                    }
                 } else if (type.equals(Serializable.class) || ClassUtils
                         .isTypeAssignableFrom(type, Serializable.class)) {
                     outState.putSerializable(key, (Serializable) value);
+                } else {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        if (type.equals(Size.class)) {
+                            outState.putSize(key, (Size) value);
+                        } else if (type.equals(SizeF.class)) {
+                            outState.putSizeF(key, (SizeF) value);
+                        }
+                    }
                 }
             } else {
                 if (type.equals(boolean[].class)) {
