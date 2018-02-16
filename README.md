@@ -2,6 +2,7 @@
 
 Fridge is an Android library that eliminates the boilerplate of saving and restoring instance state.
 
+[![CircleCI](https://circleci.com/gh/SaikoRobot/Fridge.svg?style=svg)](https://circleci.com/gh/SaikoRobot/Fridge)
 
 ## Features
 - Easy save and restore
