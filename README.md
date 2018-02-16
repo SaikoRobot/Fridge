@@ -22,7 +22,7 @@ allprojects {
 Then, add the library to your module `build.gradle`
 ```
 dependencies {
-    compile 'com.github.SaikoRobot:Fridge:0.1.0'
+    compile 'com.github.SaikoRobot:Fridge:0.2.0'
 }
 ```
 
